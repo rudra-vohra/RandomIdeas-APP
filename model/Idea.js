@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const moment = require('moment');
 
 const IdeaSchema = new mongoose.Schema({
   text:{
