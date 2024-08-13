@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const moment = require('moment');
 
 const IdeaSchema = new mongoose.Schema({
   text:{
@@ -13,7 +14,7 @@ const IdeaSchema = new mongoose.Schema({
   },
   date:{
     type: Date,
-    default: Date.now,
+    default: () => moment().format('YYYY-MM-DD')
   } 
 })
 
