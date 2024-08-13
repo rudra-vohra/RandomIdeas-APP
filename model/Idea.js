@@ -14,7 +14,7 @@ const IdeaSchema = new mongoose.Schema({
   },
   date:{
     type: Date,
-    default: () => moment().format('YYYY-MM-DD')
+    default: () => new Date().toISOString.slice(0, 10),
   } 
 })
 
